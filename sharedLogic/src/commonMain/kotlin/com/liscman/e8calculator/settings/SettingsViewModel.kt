@@ -9,7 +9,7 @@ class SettingsViewModel() {
     val state = _state.asStateFlow()
 
     // ----- Model -----
-    val model = SettingsModel()
+    val model = SettingsEngine()
 
     // -----===== FUNCTIONS =====-----
 }

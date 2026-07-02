@@ -9,7 +9,7 @@ class InfoViewModel() {
     val state = _state.asStateFlow()
 
     // ----- Model -----
-    val model = InfoModel()
+    val model = InfoEngine()
 
     // -----===== FUNCTIONS =====-----
 }

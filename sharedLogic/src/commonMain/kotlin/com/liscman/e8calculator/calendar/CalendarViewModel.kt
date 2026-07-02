@@ -9,7 +9,7 @@ class CalendarViewModel() {
     val state = _state.asStateFlow()
 
     // ----- Model -----
-    val model = CalendarModel()
+    val model = CalendarEngine()
 
     // -----===== FUNCTIONS =====-----
 }

@@ -9,7 +9,7 @@ class CalcViewModel() {
     val state = _state.asStateFlow()
 
     // ----- Model -----
-    val model = CalcModel()
+    val model = CalcEngine()
 
     // -----===== FUNCTIONS =====-----
 }
