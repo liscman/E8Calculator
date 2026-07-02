@@ -34,10 +34,10 @@ data class CalcState(
     val volunteer: Boolean = false, // 0/3
 
     // ----- Achievements -----
-    val supraregionalCurator: SupraregionalCuratorCompetition = SupraregionalCuratorCompetition.NONE,
-    val internationalNational: InternationalNationalCompetition = InternationalNationalCompetition.NONE,
-    val provincialCurator: ProvincialCuratorCompetition = ProvincialCuratorCompetition.NONE,
-    val supraregionalProvincial: SupraregionalProvincialCompetition = SupraregionalProvincialCompetition.NONE,
-    val other: OtherCompetition = OtherCompetition.NONE
+    val achievementSupraregionalCurator: SupraregionalCuratorCompetition = SupraregionalCuratorCompetition.NONE,
+    val achievementInternationalNational: InternationalNationalCompetition = InternationalNationalCompetition.NONE,
+    val achievementProvincialCurator: ProvincialCuratorCompetition = ProvincialCuratorCompetition.NONE,
+    val achievementSupraregionalProvincial: SupraregionalProvincialCompetition = SupraregionalProvincialCompetition.NONE,
+    val achievementOther: OtherCompetition = OtherCompetition.NONE
 
 )
