@@ -387,7 +387,6 @@ class CalcEngineTest {
      */
     @Test
     fun `calculates typical for user scenario`() {
-        // //TODO
         val state = CalcState(
             polishExamExemption = false,
             polishExam = 76,
