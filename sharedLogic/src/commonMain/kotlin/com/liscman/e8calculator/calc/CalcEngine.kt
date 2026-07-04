@@ -32,6 +32,11 @@ class CalcEngine{
                 mathExamExemption && mathExamGrade == Grade.EMPTY -> false
                 languageExamExemption && languageExamGrade == Grade.EMPTY -> false
 
+                //Exam percentage range
+                !polishExamExemption && polishExam !in 0..100 -> false
+                !mathExamExemption && mathExam !in 0..100 -> false
+                !languageExamExemption && languageExam !in 0..100 -> false
+
                 //Grades
                 polishGrade == Grade.EMPTY -> false
                 mathGrade == Grade.EMPTY -> false
