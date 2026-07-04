@@ -149,8 +149,13 @@ fun ExamInputSection(
                 OutlinedTextField(
                     value = if (percentage == 0) "" else percentage.toString(),
                     onValueChange = {
-                        val newValue = it.filter { char -> char.isDigit() }.toIntOrNull() ?: 0
-                        if (newValue in 0..100) onPercentageChange(newValue)
+                        val filtered = it.filter { char -> char.isDigit() }
+                        if (filtered.isEmpty()) {
+                            onPercentageChange(0)
+                        } else {
+                            val newValue = filtered.toIntOrNull() ?: 0
+                            if (newValue in 0..100) onPercentageChange(newValue)
+                        }
                     },
                     modifier = Modifier.width(100.dp),
                     singleLine = true,

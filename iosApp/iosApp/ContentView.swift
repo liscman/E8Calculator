@@ -1,4 +1,5 @@
 import SwiftUI
+import SharedLogic
 
 /**
  * The main view of the iOS application.
@@ -6,6 +7,9 @@ import SwiftUI
  * a custom bottom navigation bar, and the logic for presenting the Settings screen.
  */
 struct ContentView: View {
+    /// Persisted ViewModel instance for the calculator
+    @State private var calcViewModel = CalcViewModel()
+
     /// Currently selected tab index (0: Calculator, 1: Calendar, 2: Info)
     @State private var selectedTab = 0
     /// State controlling the visibility of the full-screen settings cover
@@ -15,9 +19,8 @@ struct ContentView: View {
         NavigationStack {
             VStack(spacing: 0) {
                 // Content with Paging (Swipeable)
-                // TabView with .page style allows users to swipe horizontally between screens
                 TabView(selection: $selectedTab) {
-                    CalculatorView()
+                    CalculatorView(viewModel: calcViewModel)
                         .tag(0)
                     CalendarView()
                         .tag(1)
