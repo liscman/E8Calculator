@@ -50,6 +50,8 @@ enum class MainTab(val title: String, val icon: ImageVector) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun App() {
+    val calcViewModel = remember { com.liscman.e8calculator.calc.CalcViewModel() }
+
     MaterialTheme {
         var isSettingsOpen by remember { mutableStateOf(false) }
 
@@ -95,7 +97,7 @@ fun App() {
                         .padding(paddingValues)
                 ) { page ->
                     when (tabs[page]) {
-                        MainTab.Calculator -> CalculatorScreen()
+                        MainTab.Calculator -> CalculatorScreen(calcViewModel)
                         MainTab.Calendar -> CalendarScreen()
                         MainTab.Info -> InfoScreen()
                     }
